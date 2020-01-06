@@ -4,18 +4,19 @@ import string
 def generate_random_solution(length=13):
     return [random.choice(string.printable) for _ in range(length)]
 
-def evaluate(solution):
-    target = list("Hello, World!")
-    diff = 0
-    for i in range(len(target)):
-        s = solution[i]
-        t = target[i]
-        diff += abs(ord(s) - ord(t))
-    return diff
+# NEW FEATURE WILL BE ADDED HERE
+#def evaluate(solution):
+#    target = list("Hello, World!")
+#    diff = 0
+#    for i in range(len(target)):
+#        s = solution[i]
+#        t = target[i]
+#       diff += abs(ord(s) - ord(t))
+#    return diff
 
-def mutate_solution(solution):
-    index = random.randint(0, len(solution) - 1)
-    solution[index] = random.choice(string.printable)
+#def mutate_solution(solution):
+#    index = random.randint(0, len(solution) - 1)
+#    solution[index] = random.choice(string.printable)
 
 best = generate_random_solution()
 best_score = evaluate(best)
