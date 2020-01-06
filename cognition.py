@@ -4,15 +4,15 @@ import string
 def generate_random_solution(length=13):
     return [random.choice(string.printable) for _ in range(length)]
 
-# NEW FEATURE WILL BE ADDED HERE
-#def evaluate(solution):
-#    target = list("Hello, World!")
-#    diff = 0
-#    for i in range(len(target)):
-#        s = solution[i]
-#        t = target[i]
-#       diff += abs(ord(s) - ord(t))
-#    return diff
+#NEW FEATURE WILL BE ADDED HERE
+def evaluate(solution):
+   target = list("Hello, World!")
+    diff = 0
+    for i in range(len(target)):
+        s = solution[i]
+        t = target[i]
+       diff += abs(ord(s) - ord(t))
+    return diff
 
 #def mutate_solution(solution):
 #    index = random.randint(0, len(solution) - 1)
