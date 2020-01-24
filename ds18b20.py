@@ -8,12 +8,10 @@ import time
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
  
-base_dir = '/sys/bus/w1/devices/'
-device_folder = glob.glob(base_dir + '28*')[0]
-device_file = device_folder + '/w1_slave'
+temp_sensor = '/sys/bus/w1/devices/28-03079779b9e3/w1_slave'
  
 def read_temp_raw():
-    f = open(device_file, 'r')
+    f = open(temp_sensor, 'r')
     lines = f.readlines()
     f.close()
     return lines
