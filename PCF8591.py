@@ -14,7 +14,7 @@ bus = smbus.SMBus(1)
 while True:
   bus.write_byte(address,A0)
   value = bus.read_byte(address)
-  print("AOUT:%1.3f "%(value*5/255))
-  time.sleep(0.1)
+  print("AOUT:%1.3f "%(value*3.3/255))
+  time.sleep(1)
   
 #save file as "pcf8591.py" and execute it with: sudo python pcf8591.py  
